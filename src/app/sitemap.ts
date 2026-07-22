@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://thunderelectricalsdubai.com" // Placeholder domain
+  const baseUrl = "https://www.thunderelectricals.ae"
 
   const services = ["ac-repair", "appliances", "electrical"].map((slug) => ({
     url: `${baseUrl}/services/${slug}`,
