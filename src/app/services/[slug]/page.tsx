@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { Phone, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 type ServiceData = {
   id: string
@@ -31,11 +32,11 @@ const servicesData: Record<string, ServiceData> = {
   },
   "electrical": {
     id: "electrical",
-    title: "Professional Electrical & Plumbing Services",
-    description: "Licensed electricians and plumbers in Dubai. We handle short circuits, wiring, water heater repair, and leak fixing.",
-    keywords: ["electrician Dubai", "plumber Dubai", "water heater repair", "short circuit fix", "electrical wiring Dubai"],
-    content: "Electrical and plumbing issues require immediate, professional attention to ensure safety. Our licensed team is equipped to handle everything from flickering lights and tripped breakers to plumbing leaks and water heater installations.",
-    features: ["Short Circuit & Fault Finding", "DB Panel & Breaker Replacement", "Water Heater Repair & Installation", "Pipe Leaks & Blocked Drains", "Complete Rewiring"]
+    title: "Professional Electrical Services",
+    description: "Licensed electricians in Dubai. We handle short circuits, wiring, DB panel replacements, and complete rewiring.",
+    keywords: ["electrician Dubai", "electrical repair Dubai", "short circuit fix", "electrical wiring Dubai", "DB panel installation"],
+    content: "Electrical issues require immediate, professional attention to ensure safety. Our licensed team is equipped to handle everything from flickering lights and tripped breakers to complete rewiring and power socket installations.",
+    features: ["Short Circuit & Fault Finding", "DB Panel & Breaker Replacement", "Lighting & Fixture Installation", "Power Sockets & Switches", "Complete Rewiring & Inspection"]
   }
 }
 
@@ -69,8 +70,19 @@ export default async function ServicePage({ params }: Props) {
   return (
     <div className="flex flex-col">
       {/* Header */}
-      <section className="bg-slate-900 py-16 text-white sm:py-24">
-        <div className="container mx-auto px-4 sm:px-6">
+      <section className="relative overflow-hidden bg-slate-900 py-16 text-white sm:py-24">
+        {/* Banner Image */}
+        <div className="absolute inset-0 z-0">
+          <Image 
+            src={`/images/${service.id}.png`}
+            alt={`${service.title} background`}
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/40"></div>
+        </div>
+        <div className="container relative z-10 mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
             <h1 className="font-outfit text-3xl font-bold tracking-tight sm:text-5xl">
               {service.title}
@@ -90,6 +102,16 @@ export default async function ServicePage({ params }: Props) {
               <h2 className="font-outfit text-2xl font-bold text-slate-900 dark:text-white sm:text-3xl">
                 Comprehensive Service Details
               </h2>
+              
+              <div className="mt-8 mb-8 relative h-64 w-full overflow-hidden rounded-2xl sm:h-[400px]">
+                <Image
+                  src={`/images/${service.id}.png`}
+                  alt={service.title}
+                  fill
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+
               <p className="mt-6 text-lg leading-relaxed text-slate-700 dark:text-slate-300">
                 {service.content}
               </p>
@@ -118,9 +140,9 @@ export default async function ServicePage({ params }: Props) {
                 </p>
                 <div className="mt-6 flex flex-col gap-3">
                   <Button size="lg" variant="thunder" className="w-full gap-2 text-base font-bold" asChild>
-                    <a href="tel:0551555386">
+                    <a href="tel:0504962516">
                       <Phone className="h-5 w-5" />
-                      Call 055 155 5386
+                      Call Now
                     </a>
                   </Button>
                 </div>

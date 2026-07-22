@@ -72,9 +72,9 @@ export default function Home() {
             </motion.p>
             <motion.div variants={FADE_UP} className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button size="lg" variant="thunder" className="w-full gap-2 sm:w-auto h-14 px-8 text-lg rounded-full group transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(250,204,21,0.4)]" asChild>
-                <a href="tel:0551555386">
+                <a href="tel:0504962516">
                   <Phone className="h-5 w-5 group-hover:rotate-12 transition-transform" />
-                  Call Now: 055 155 5386
+                  Call Now
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="w-full gap-2 border-slate-700 bg-slate-900/50 text-white hover:bg-slate-800 hover:text-white sm:w-auto h-14 px-8 text-lg rounded-full group transition-all duration-300" asChild>
@@ -157,14 +157,6 @@ export default function Home() {
                 icon: Zap,
                 color: "text-thunder-500",
                 bg: "bg-thunder-500/10",
-                link: "/services/electrical"
-              },
-              {
-                title: "Plumbing Services",
-                description: "Fixing leaks, water heater repair and installation, blocked drains, and bathroom fittings.",
-                icon: Droplets,
-                color: "text-emerald-500",
-                bg: "bg-emerald-500/10",
                 link: "/services/electrical"
               },
               {
@@ -310,9 +302,9 @@ export default function Home() {
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-6 sm:flex-row">
               <Button size="lg" variant="thunder" className="w-full gap-3 h-16 px-10 text-xl font-bold rounded-full shadow-[0_0_30px_rgba(250,204,21,0.3)] hover:scale-105 transition-all sm:w-auto" asChild>
-                <a href="tel:0551555386">
+                <a href="tel:0504962516">
                   <Phone className="h-6 w-6 animate-bounce" />
-                  055 155 5386
+                  Call Now
                 </a>
               </Button>
             </div>

@@ -18,7 +18,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm text-slate-500 dark:text-slate-400">
-              Professional repair and maintenance services for all types of ACs, home appliances, electrical, and plumbing work in Dubai.
+              Professional repair and maintenance services for all types of ACs, home appliances, and electrical work in Dubai.
             </p>
           </div>
 
@@ -30,7 +30,6 @@ export function Footer() {
               <li><Link href="/services/appliances" className="hover:text-primary-600">Washing Machine Repair</Link></li>
               <li><Link href="/services/appliances" className="hover:text-primary-600">Fridge & Chiller Repair</Link></li>
               <li><Link href="/services/electrical" className="hover:text-primary-600">Electrical Work</Link></li>
-              <li><Link href="/services/electrical" className="hover:text-primary-600">Plumbing Services</Link></li>
             </ul>
           </div>
 
@@ -40,11 +39,19 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-slate-500 dark:text-slate-400">
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary-600" />
-                <span>D 90 - Dubai<br/>United Arab Emirates</span>
+                <span>Satwa - Dubai<br/>U.A.E.</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 shrink-0 text-primary-600" />
-                <a href="tel:0551555386" className="hover:text-primary-600">055 155 5386</a>
+                <a href="tel:0504962516" className="hover:text-primary-600">050 4962516</a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="h-4 w-4 shrink-0 text-primary-600" />
+                <a href="tel:0553804786" className="hover:text-primary-600">055 3804786</a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail className="h-4 w-4 shrink-0 text-primary-600" />
+                <a href="mailto:thunderelectric2000@hotmail.com" className="hover:text-primary-600">thunderelectric2000@hotmail.com</a>
               </li>
               <li className="flex items-center gap-3">
                 <Clock className="h-4 w-4 shrink-0 text-primary-600" />

@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     default: "Thunder Electrical Equipment Repairing | Dubai",
     template: "%s | Thunder Electrical Equipment",
   },
-  description: "Professional AC, washing machine, fridge, microwave, and electrical repair services in Dubai. 24/7 support. Call 055 155 5386.",
-  keywords: ["AC repair Dubai", "electrical repair", "plumbing Dubai", "washing machine repair", "fridge repair", "appliance repair Dubai"],
+  description: "Professional AC, washing machine, fridge, microwave, and electrical repair services in Dubai. 24/7 support. Call 050 4962516.",
+  keywords: ["AC repair Dubai", "electrical repair", "washing machine repair", "fridge repair", "appliance repair Dubai"],
   openGraph: {
     title: "Thunder Electrical Equipment Repairing | Dubai",
     description: "Professional appliance and electrical repair services in Dubai. 24/7 support.",
@@ -47,10 +47,10 @@ export default function RootLayout({
     "image": "https://thunderelectricalsdubai.com/logo.png",
     "@id": "https://thunderelectricalsdubai.com",
     "url": "https://thunderelectricalsdubai.com",
-    "telephone": "0551555386",
+    "telephone": "0504962516",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "D 90",
+      "streetAddress": "Satwa",
       "addressLocality": "Dubai",
       "addressCountry": "AE"
     },

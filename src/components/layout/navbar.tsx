@@ -27,16 +27,16 @@ export function Navbar() {
             <Link href="/" className="text-sm font-medium text-slate-600 hover:text-primary-600 dark:text-slate-300 dark:hover:text-primary-500">Home</Link>
             <Link href="/services/ac-repair" className="text-sm font-medium text-slate-600 hover:text-primary-600 dark:text-slate-300 dark:hover:text-primary-500">AC Repair</Link>
             <Link href="/services/appliances" className="text-sm font-medium text-slate-600 hover:text-primary-600 dark:text-slate-300 dark:hover:text-primary-500">Appliances</Link>
-            <Link href="/services/electrical" className="text-sm font-medium text-slate-600 hover:text-primary-600 dark:text-slate-300 dark:hover:text-primary-500">Electrical & Plumbing</Link>
+            <Link href="/services/electrical" className="text-sm font-medium text-slate-600 hover:text-primary-600 dark:text-slate-300 dark:hover:text-primary-500">Electrical</Link>
             <Link href="/contact" className="text-sm font-medium text-slate-600 hover:text-primary-600 dark:text-slate-300 dark:hover:text-primary-500">Contact</Link>
           </div>
 
           {/* Call CTA */}
           <div className="hidden md:flex">
             <Button variant="thunder" className="gap-2" asChild>
-              <a href="tel:0551555386">
+              <a href="tel:0504962516">
                 <Phone className="h-4 w-4" />
-                <span className="hidden lg:inline">055 155 5386</span>
+                <span className="hidden lg:inline">Call Now</span>
               </a>
             </Button>
           </div>
@@ -57,12 +57,12 @@ export function Navbar() {
             <Link href="/" className="text-sm font-medium" onClick={() => setIsOpen(false)}>Home</Link>
             <Link href="/services/ac-repair" className="text-sm font-medium" onClick={() => setIsOpen(false)}>AC Repair</Link>
             <Link href="/services/appliances" className="text-sm font-medium" onClick={() => setIsOpen(false)}>Appliances</Link>
-            <Link href="/services/electrical" className="text-sm font-medium" onClick={() => setIsOpen(false)}>Electrical & Plumbing</Link>
+            <Link href="/services/electrical" className="text-sm font-medium" onClick={() => setIsOpen(false)}>Electrical</Link>
             <Link href="/contact" className="text-sm font-medium" onClick={() => setIsOpen(false)}>Contact</Link>
             <Button variant="thunder" className="w-full gap-2 mt-4" asChild>
-              <a href="tel:0551555386">
+              <a href="tel:0504962516">
                 <Phone className="h-4 w-4" />
-                Call Now: 055 155 5386
+                Call Now
               </a>
             </Button>
           </div>
