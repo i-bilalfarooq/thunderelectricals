@@ -11,6 +11,7 @@ type ServiceData = {
   keywords: string[]
   content: string
   features: string[]
+  titleHighlight: string
 }
 
 const servicesData: Record<string, ServiceData> = {
@@ -20,7 +21,8 @@ const servicesData: Record<string, ServiceData> = {
     description: "Professional AC repair, servicing, and annual maintenance contracts in Dubai. We fix all brands quickly and efficiently.",
     keywords: ["AC repair Dubai", "AC servicing", "split AC repair", "AC maintenance contract", "AC gas refill Dubai"],
     content: "Living in Dubai, a working AC is essential. Thunder Electrical provides top-tier AC repair and maintenance services. Whether it's a minor leak, poor cooling, or a complete system breakdown, our certified technicians diagnose and fix the issue promptly.",
-    features: ["Gas Refilling & Leak Repair", "Compressor Replacement", "Filter Cleaning & Deep Wash", "Thermostat Fixes", "Annual Maintenance Contracts (AMC)"]
+    features: ["Gas Refilling & Leak Repair", "Compressor Replacement", "Filter Cleaning & Deep Wash", "Thermostat Fixes", "Annual Maintenance Contracts (AMC)"],
+    titleHighlight: "Maintenance"
   },
   "appliances": {
     id: "appliances",
@@ -28,7 +30,8 @@ const servicesData: Record<string, ServiceData> = {
     description: "Fast and reliable repair for washing machines, fridges, microwaves, and dishwashers in Dubai. Call us for same-day service.",
     keywords: ["washing machine repair Dubai", "fridge repair Dubai", "microwave repair", "dishwasher maintenance", "appliance fixing near me"],
     content: "Don't let a broken appliance disrupt your routine. We specialize in repairing all major household appliances, from top and front-load washing machines to commercial chillers and microwaves. We carry genuine spare parts to ensure a long-lasting fix.",
-    features: ["Washing Machine & Dryer Repair", "Refrigerator & Chiller Fixing", "Microwave & Oven Repair", "Dishwasher Maintenance", "Gas Cooker Servicing"]
+    features: ["Washing Machine & Dryer Repair", "Refrigerator & Chiller Fixing", "Microwave & Oven Repair", "Dishwasher Maintenance", "Gas Cooker Servicing"],
+    titleHighlight: "Repair"
   },
   "electrical": {
     id: "electrical",
@@ -36,7 +39,8 @@ const servicesData: Record<string, ServiceData> = {
     description: "Licensed electricians in Dubai. We handle short circuits, wiring, DB panel replacements, and complete rewiring.",
     keywords: ["electrician Dubai", "electrical repair Dubai", "short circuit fix", "electrical wiring Dubai", "DB panel installation"],
     content: "Electrical issues require immediate, professional attention to ensure safety. Our licensed team is equipped to handle everything from flickering lights and tripped breakers to complete rewiring and power socket installations.",
-    features: ["Short Circuit & Fault Finding", "DB Panel & Breaker Replacement", "Lighting & Fixture Installation", "Power Sockets & Switches", "Complete Rewiring & Inspection"]
+    features: ["Short Circuit & Fault Finding", "DB Panel & Breaker Replacement", "Lighting & Fixture Installation", "Power Sockets & Switches", "Complete Rewiring & Inspection"],
+    titleHighlight: "Services"
   }
 }
 
@@ -82,12 +86,14 @@ export default async function ServicePage({ params }: Props) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/40"></div>
         </div>
-        <div className="container relative z-10 mx-auto px-4 sm:px-6">
-          <div className="max-w-3xl">
-            <h1 className="font-outfit text-3xl font-bold tracking-tight sm:text-5xl">
-              {service.title}
+        <div className="container relative z-10 mx-auto px-4 sm:px-6 text-center">
+          <div className="mx-auto max-w-3xl">
+            <h1 className="font-outfit text-4xl font-extrabold tracking-tight sm:text-5xl">
+              {service.title.split(service.titleHighlight)[0]}
+              <span className="text-thunder-500">{service.titleHighlight}</span>
+              {service.title.split(service.titleHighlight)[1]}
             </h1>
-            <p className="mt-4 text-lg text-slate-300 sm:text-xl">
+            <p className="mx-auto mt-8 max-w-2xl text-lg text-slate-300 sm:text-xl">
               {service.description}
             </p>
           </div>

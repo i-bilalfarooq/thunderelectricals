@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { MapPin, Phone, Mail, Clock, Zap } from "lucide-react"
 
 export function Footer() {
@@ -9,13 +10,13 @@ export function Footer() {
           
           {/* Brand */}
           <div>
-            <Link href="/" className="mb-4 flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary-600 text-white">
-                <Zap className="h-5 w-5 fill-thunder-400 text-thunder-400" />
-              </div>
-              <span className="text-xl font-bold tracking-tight">
-                Thunder <span className="text-primary-600">Electrical</span>
-              </span>
+            <Link href="/" className="mb-4 relative block h-16 w-56">
+              <Image 
+                src="/images/Logo.png" 
+                alt="Thunder Electrical Logo" 
+                fill
+                className="object-contain object-left"
+              />
             </Link>
             <p className="text-sm text-slate-500 dark:text-slate-400">
               Professional repair and maintenance services for all types of ACs, home appliances, and electrical work in Dubai.

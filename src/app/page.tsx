@@ -46,17 +46,23 @@ export default function Home() {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         </motion.div>
 
-        <div className="container relative z-10 mx-auto px-4 py-24 sm:px-6 lg:px-8">
+        <div className="container relative z-10 mx-auto px-4 pt-24 pb-32 sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={STAGGER}
             className="mx-auto max-w-4xl text-center"
           >
-            <motion.div variants={FADE_UP} className="mb-6 inline-flex items-center rounded-full bg-primary-900/50 px-4 py-1.5 text-sm font-medium text-primary-300 ring-1 ring-primary-700/50 shadow-[0_0_20px_rgba(37,99,235,0.3)]">
+            <motion.a 
+              href="https://share.google/WzIUswxgl2vslRFqk"
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={FADE_UP} 
+              className="mb-6 inline-flex items-center rounded-full bg-primary-900/50 px-4 py-1.5 text-sm font-medium text-primary-300 ring-1 ring-primary-700/50 shadow-[0_0_20px_rgba(250,204,21,0.15)] hover:bg-primary-800/60 transition-colors cursor-pointer backdrop-blur-md"
+            >
               <Star className="mr-1.5 h-4 w-4 fill-thunder-500 text-thunder-500 animate-pulse" />
               Rated 4.85 on Google Reviews
-            </motion.div>
+            </motion.a>
             <motion.h1 variants={FADE_UP} className="mb-6 font-outfit text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl leading-tight">
               Dubai's Trusted Experts in <br className="hidden sm:block" />
               <span className="text-primary-500 relative inline-block">
@@ -92,7 +98,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-2 text-slate-400"
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-2 text-slate-400"
         >
           <span className="text-xs uppercase tracking-widest">Scroll Down</span>
           <motion.div 
@@ -286,18 +292,20 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative overflow-hidden bg-primary-600 py-24 text-white">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+      <section className="relative overflow-hidden bg-slate-900 py-24 text-white dark:bg-slate-950 border-t border-thunder-500/20">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+        {/* Subtle radial gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-thunder-500/10 to-transparent"></div>
         <div className="container relative z-10 mx-auto px-4 text-center sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-outfit text-4xl font-extrabold tracking-tight sm:text-5xl">
+            <h2 className="font-outfit text-4xl font-extrabold tracking-tight sm:text-5xl text-white">
               Need Emergency Repair?
             </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-xl text-primary-100">
+            <p className="mx-auto mt-6 max-w-2xl text-xl text-slate-300">
               Our technicians are on standby to fix your AC, fridge, or electrical issues immediately.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-6 sm:flex-row">

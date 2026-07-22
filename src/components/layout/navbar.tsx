@@ -1,6 +1,7 @@
 "use client"
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Phone, Menu, X, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -13,13 +14,14 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary-600 text-white">
-              <Zap className="h-5 w-5 fill-thunder-400 text-thunder-400" />
-            </div>
-            <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
-              Thunder <span className="text-primary-600">Electrical</span>
-            </span>
+          <Link href="/" className="relative flex h-12 w-48 items-center justify-start">
+            <Image 
+              src="/images/Logo.png" 
+              alt="Thunder Electrical Logo" 
+              fill
+              className="object-contain object-left"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -43,7 +45,7 @@ export function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <div className="md:hidden">
-            <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
+            <Button aria-label="Toggle Mobile Menu" variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
               {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>

@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { MapPin, Phone, Mail, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { ContactForm } from "@/components/contact/contact-form"
 
 export const metadata: Metadata = {
   title: "Contact Us | Thunder Electrical Dubai",
@@ -24,10 +25,10 @@ export default function ContactPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/40"></div>
         </div>
         <div className="container relative z-10 mx-auto px-4 text-center sm:px-6">
-          <h1 className="font-outfit text-3xl font-bold tracking-tight sm:text-5xl">
-            Contact Us
+          <h1 className="font-outfit text-4xl font-extrabold tracking-tight sm:text-5xl">
+            Contact <span className="text-thunder-500">Us</span>
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-300 sm:text-xl">
+          <p className="mx-auto mt-8 max-w-2xl text-lg text-slate-300 sm:text-xl">
             We are available 24/7 for emergency repairs across Dubai.
           </p>
         </div>
@@ -101,41 +102,7 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-
-            {/* Quick Contact Form */}
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950 sm:p-8">
-              <h3 className="font-outfit text-xl font-bold text-slate-900 dark:text-white">Send us a message</h3>
-              <form className="mt-6 space-y-4">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium text-slate-700 dark:text-slate-300">Name</label>
-                    <input id="name" type="text" className="w-full rounded-md border border-slate-300 bg-transparent px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-600 dark:border-slate-700 dark:focus:ring-primary-500" placeholder="John Doe" />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="phone" className="text-sm font-medium text-slate-700 dark:text-slate-300">Phone</label>
-                    <input id="phone" type="tel" className="w-full rounded-md border border-slate-300 bg-transparent px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-600 dark:border-slate-700 dark:focus:ring-primary-500" placeholder="055 123 4567" />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="service" className="text-sm font-medium text-slate-700 dark:text-slate-300">Service Required</label>
-                  <select id="service" className="w-full rounded-md border border-slate-300 bg-transparent px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-600 dark:border-slate-700 dark:focus:ring-primary-500">
-                    <option value="ac">AC Repair & Maintenance</option>
-                    <option value="appliance">Washing Machine / Fridge</option>
-                    <option value="electrical">Electrical Work</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium text-slate-700 dark:text-slate-300">Message</label>
-                  <textarea id="message" rows={4} className="w-full rounded-md border border-slate-300 bg-transparent px-3 py-2 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-600 dark:border-slate-700 dark:focus:ring-primary-500" placeholder="Describe the issue..."></textarea>
-                </div>
-                <Button variant="default" className="w-full bg-primary-600 text-white hover:bg-primary-700" type="button">
-                  Send Request
-                </Button>
-                <p className="text-center text-xs text-slate-500">For faster response, please call us directly.</p>
-              </form>
-            </div>
-            
+            <ContactForm />
           </div>
         </div>
       </section>
