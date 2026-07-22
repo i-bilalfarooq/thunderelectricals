@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -79,6 +80,21 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${outfit.variable} scroll-smooth antialiased`}
     >
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-D387HMGBJ2"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-D387HMGBJ2');
+          `}
+        </Script>
+      </head>
       <body className="min-h-screen flex flex-col font-sans">
         <script
           type="application/ld+json"
